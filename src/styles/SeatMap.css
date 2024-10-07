@@ -1,0 +1,71 @@
+/* SeatMap.css */
+
+/* Seat Map Container */
+.seat-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Row Styles */
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+/* Seat Styles */
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #e7e7e7;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+/* Seat Status Styles */
+.seat.available:hover {
+    background-color: #4caf50; /* Green for available seats */
+}
+
+.seat.booked {
+    background-color: #f44336; /* Red for booked seats */
+    cursor: not-allowed;
+}
+
+/* Tooltip Styles */
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: none; /* Hidden by default */
+}
+
+/* Show tooltip on hover */
+.seat:hover .tooltip {
+    display: block;
+}
+
+/* Last Row Specific Styles */
+.last-row {
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 600px) {
+    .seat {
+        width: 30px;
+        height: 30px;
+    }
+}
